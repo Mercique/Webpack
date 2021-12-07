@@ -5,11 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Калькулятор дат</title>
-	<script type="module" src="./js/main.js"></script>
+	<script src="../node_modules/howler/dist/howler.js" defer></script>
+	<script type="module" src="./js/main.js" defer></script>
 </head>
 <body>
-	<h2>Калькулятор дат</h2>
-	
 	<form id="calcDate">
 		<label for="dateFrom">
 			Первая дата:
@@ -23,5 +22,18 @@
 	</form>
 
 	<p id="output"></p>
+
+	<div id='timerBox' style="display: flex; gap: 10px">
+		<form id="timer">
+			<label for="time">
+				Время в минутах
+				<input type="number" name="time" id="time">
+			</label>
+			<button type="submit">Старт</button>
+		</form>
+		<button id="stop">Стоп</button>
+	</div>
+	
+	<p id="outputTimer"></p>
 </body>
 </html>

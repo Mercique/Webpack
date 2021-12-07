@@ -12,12 +12,12 @@ form.onsubmit = (event) => {
     const dateTo = formData.get("dateTo");
 
     if (!dateFrom || !dateTo) {
-        printError('Ошибка, заполните оба поля!')
+        printError('Ошибка, заполните оба поля!', 'output')
 
         return
     }
 
     const dateDiff = getDateDiff(dateFrom, dateTo)
 
-    printDateDiff(dateDiff)
+    printDateDiff(dateDiff, 'output')
 };
