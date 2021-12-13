@@ -22,8 +22,16 @@ function printTimer({seconds, minutes, hours}, el) {
     let resultParagraph = document.getElementById(el)
 
     resultParagraph.innerHTML = `
-        ${hours}:${minutes}:${seconds}
+        ${printNums(hours)}:${printNums(minutes)}:${printNums(seconds)}
     `
+}
+
+function printNums(num) {
+    if (num < 10) {
+        return `0${num}`;
+    } else {
+        return num;
+    }
 }
 
 export {printDateDiff, printError, printTimer}

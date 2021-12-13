@@ -1,11 +1,13 @@
 import {printTimer} from "./print.js";
 
+let timer;
+
 export function setTimer (time) {
-     window.timerID = setInterval(() => {
+    timer = setInterval(() => {
         if (time === 0) {
-            clearInterval(timerID)
+            clearInterval(timer)
             const sound = new Howl({
-                src: ['sound.mp3']
+                src: ['media/end.mp3']
             });
 
             sound.play();
@@ -22,4 +24,4 @@ export function setTimer (time) {
 
 }
 
-export function stopTimer () {clearInterval(timerID)}
+export function stopTimer () {clearInterval(timer)}
