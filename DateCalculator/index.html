@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Калькулятор дат</title>
-	<script type="module" src="./js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор дат</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/howler.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </head>
 <body>
-	<h2>Калькулятор дат</h2>
-	
-	<form id="calcDate">
-		<label for="dateFrom">
-			Первая дата:
-			<input type="date" name="dateFrom" id="dateFrom">
-		</label>
-		<label for="dateTo">
-			Вторая дата:
-			<input type="date" name="dateTo" id="dateTo">
-		</label>
-		<button type="submit">Рассчитать промежуток</button>
-	</form>
+    <button class="btn" onclick="document.querySelector('.calc').classList.toggle('hidden')">Калькулятор дат</button>
+    <div class="calc hidden">
+        <form id="calcDate">
+            <label for="dateFrom">
+                Первая дата:
+                <input type="date" name="dateFrom" id="dateFrom">
+            </label>
+            <label for="dateTo">
+                Вторая дата:
+                <input type="date" name="dateTo" id="dateTo">
+            </label>
+            <button type="submit">Рассчитать промежуток</button>
+        </form>
 
-	<p id="output"></p>
+        <p id="output"></p>
+    </div>
+    
+    <button class="btn" onclick="document.querySelector('.timer').classList.toggle('hidden')">Таймер</button>
+    <div class="timer">
+        <form id="timer">
+            <label for="time">
+                Время в минутах
+                <input type="number" name="time" id="time">
+            </label>
+            <button type="submit">Старт</button>
+        </form>
+        <button id="stop">Стоп</button>
+        
+        <p id="outputTimer"></p>
+    </div>
 </body>
 </html>
