@@ -1,0 +1,35 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "webpack course geekbrains",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "development": "webpack --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mercique/Webpack.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "webpack"
+  ],
+  "author": "Ilya Chvanov <mercy1ess@list.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mercique/Webpack/issues"
+  },
+  "homepage": "https://github.com/Mercique/Webpack#readme",
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "dependencies": {
+    "howler": "^2.2.3",
+    "luxon": "^2.2.0"
+  }
+}
