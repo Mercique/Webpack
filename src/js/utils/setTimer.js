@@ -1,4 +1,6 @@
 import {printTimer} from "./print.js";
+import { Howl } from "howler";
+import soundPath from "../../media/soundEnd.mp3";
 
 let timer;
 
@@ -7,7 +9,7 @@ export function setTimer (time) {
         if (time === 0) {
             clearInterval(timer)
             const sound = new Howl({
-                src: ['media/end.mp3']
+                src: [soundPath]
             });
 
             sound.play();
